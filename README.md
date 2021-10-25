@@ -888,10 +888,15 @@ async function myFunc(){
     let myPromise = new Promise((resolve,reject)=>{
         setTimeout(()=>{resolve("done!")},1000)
     });
-    let result = myPromise.then((val)=>(val));
+    console.log('before await')
+    let result = await myPromise.then((val)=>(val));
+    console.log('after await')
     return result;
 }
 myFunc().then((result)=>{console.log(result)})
+//-> 'before await'
+//-> 'done'
+//-> 'after await'
 
 ```
 [↑ Back to top](#es6-es7-es8-es9-cheat-sheet)
