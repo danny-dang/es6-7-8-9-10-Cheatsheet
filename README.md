@@ -885,7 +885,7 @@ async function myFunc(){
         setTimeout(()=>{resolve("done!")},1000)
     });
     console.log('before await')
-    let result = await myPromise.then((val)=>(val));
+    let result = await myPromise.then((val) => console.log(val));
     console.log('after await')
     return result;
 }
