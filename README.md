@@ -811,7 +811,7 @@ promiseDoHomework.then(function(homeworkResult){
 ```
 
 ### Promise Chain
-A chain of tasks can be sequentially executed. 
+A chain of tasks can be sequentially executed. The result of one promise can be used in the next promise
 ```javascript
 const doHomework = function(){  
     return new Promise(function(resolve,reject){
